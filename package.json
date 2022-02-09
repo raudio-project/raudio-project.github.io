@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass src/sass:dist/css --watch",
-    "start": "eleventy --serve & npm run watch:sass",
+    "watch:11ty": "eleventy --serve",
+    "start": "npm run watch:11ty & npm run watch:sass",
     "build": "eleventy",
     "deploy": "npm run build && gh-pages -d dist/"
   },
