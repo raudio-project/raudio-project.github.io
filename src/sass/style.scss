@@ -1,6 +1,8 @@
 // Setup done with help from https://jkc.codes/blog/using-sass-with-eleventy/
 
+@use 'base';
+
 :root {
-    background-color: black;
+    background-color: var(--clr-red);
     color: green;
 }
