@@ -1,1 +1,1 @@
-# Eleventy Starter Project
+no bully
