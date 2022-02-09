@@ -4,7 +4,8 @@
   "description": "Website for raudio project",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
+    "watch:sass": "sass src/sass:dist/css --watch",
+    "start": "eleventy --serve & npm run watch:sass",
     "build": "eleventy",
     "deploy": "npm run build && gh-pages -d dist/"
   },
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/raudio-project/raudio-project.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "sass": "^1.49.7"
   }
 }

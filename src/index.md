@@ -1,1 +1,0 @@
-# Eleventy Starter Project
