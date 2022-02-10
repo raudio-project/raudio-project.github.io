@@ -7,7 +7,11 @@
     "watch:sass": "sass src/sass:dist/css --watch",
     "watch:11ty": "eleventy --serve",
     "start": "npm run watch:11ty & npm run watch:sass",
-    "build": "eleventy",
+
+    "build:sass": "sass src/sass:dist/css",
+    "build:11ty": "eleventy",
+    "build": "npm run build:11ty && npm run build:sass",
+    
     "deploy": "npm run build && gh-pages -d dist/"
   },
   "repository": {
