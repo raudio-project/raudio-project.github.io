@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#282828">
+    <link rel="stylesheet" href="css/{{page_name}}.css">
+    <link rel="shortcut icon" type="image/png" href="./assets/raudio_logo.png"/>
+    <title>{{ title }}</title>
+
+    {# Temporary coming soon script for the non-functional links #}
+    <script>
+        const comingSoon = () => alert('Coming soon!');
+    </script>
+</head>
+<body>
+    {% include 'nav_bar.njk' %}
+    
+    <main>
+        {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+</body>
+</html>
