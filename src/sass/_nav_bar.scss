@@ -1,0 +1,50 @@
+nav {
+    // Creates 3 distinct sections
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    
+    position: fixed;
+    width: 100%;
+    background-color: var(--clr-background-dark);
+    
+    // INFO: Is this needed? Hacky fix for now
+    z-index: 1000;
+
+    .home-text {
+        color: white;
+        font-family: var(--font-primary);
+        font-size: clamp(1.9rem, 5vw, 2rem);
+        padding: 0.5em;
+        text-decoration: none;
+    }
+
+    .links {
+        // Distributes the links evenly
+        display: flex;
+        flex-flow: row;
+        gap: 1em;
+        justify-content: center;
+
+        & > a {
+            color: white;
+            text-decoration: none;
+            font-family: var(--font-secondary);
+            font-size: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        // The selected item gets an underline with the accent color
+        .selected::after {
+            content: '';
+            width: 65%;
+            height: 2px;
+            background-color: var(--clr-accent);
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
