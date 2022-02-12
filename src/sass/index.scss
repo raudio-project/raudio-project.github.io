@@ -3,7 +3,6 @@
 // Use base template
 @use 'base';
 
-
 main {
     // Every section will be 100% of the screen
     // INFO: Is it a good idea to use a relative unit here? Might break on
@@ -14,7 +13,7 @@ main {
     }
 
     .hero-introduction {
-        background: var(--clr-background-dark);
+        background: base.$clr-background-dark;
 
         // Displays text side by side to logo
         display: flex;
@@ -45,7 +44,7 @@ main {
 
         h1 {
             color: white;
-            font-family: var(--font-primary);
+            font-family: base.$font-primary;
             font-weight: 500;
             font-size: 3rem;
             margin-bottom: 0.5em;
@@ -56,11 +55,11 @@ main {
         }
 
         a {
-            background: var(--clr-accent);
+            background: base.$clr-accent;
             color: black;
             text-decoration: none;
             padding: 0.5em 2em;
-            font-family: var(--font-secondary);
+            font-family: base.$font-secondary;
             border-radius: 2px;
             font-weight: 600;
         }
@@ -69,7 +68,7 @@ main {
     // For now, since we have nothing else to talk about with the project,
     // just display some filler text
     .section-two {
-        background: var(--clr-background-light);
+        background: base.$clr-background-light;
         
         display: grid;
         gap: 0;
