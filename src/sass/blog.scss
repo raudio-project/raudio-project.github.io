@@ -64,6 +64,10 @@ main {
             transform: scale(1.015);
             filter: brightness(1.2);
         }
+
+        article:active {
+            transform: scale(0.975)
+        }
     }
 
 

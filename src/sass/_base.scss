@@ -18,11 +18,42 @@ $nav-height: 4.6em;
 h1 {
     color: white;
     font-family: $font-primary;
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    color: white;
+    font-family: $font-primary;
     font-weight: 400;
+    font-size: 1.75rem;
 }
 
 a {
     color: $clr-accent;
+    font-family: $font-secondary;
+    text-decoration: none;
+}
+
+.raudio-redirect-btn {
+    text-decoration: none;
+    padding: 0.5em 2em;
+    font-family: $font-secondary;
+    border-radius: 2px;
+    font-weight: 600;
+    background: $clr-background-dark;
+    color: white;
+}
+
+.accented {
+    background: $clr-accent;
+    color: black;
+}
+
+.outlined {
+    background: $clr-background-dark;
+    box-shadow: inset 0px 0px 0px 1px $clr-accent;
 }
 
 /* Nav Bar */
@@ -37,6 +68,9 @@ nav {
     width: 100%;
     background-color: $clr-background-dark;
     height: $nav-height;
+
+    // INFO: Is this needed? Hacky fix for now
+    z-index: 1000;
 
     .home-text {
         color: white;
@@ -54,16 +88,16 @@ nav {
         justify-content: center;
 
         @keyframes nav-underline {
-            from {
-                transform: scaleX(0);
+            0% {
+                width: 0%;
             }
 
-            to {
-                transform: scaleX(50%);
+            100% {
+                width: 65%;
             }
         }
 
-        a:hover::after {
+        a:not(.selected):hover::after {
             content: '';
             width: 65%;
             height: 2px;
@@ -72,6 +106,8 @@ nav {
             bottom: -5px;
             left: 50%;
             transform: translateX(-50%);
+
+            animation: nav-underline 200ms ease-in-out;
         }
 
         & > a {
