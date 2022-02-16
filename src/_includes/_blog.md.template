@@ -1,0 +1,12 @@
+<!--- 
+    In order to display the list of blog posts, you need to embed some
+    metadata about the blog post, see below for what information you should
+    include.
+-->
+---
+title: 'This is the title of my article'
+description: 'This a short one-liner about what the article is about'
+author: 'Write who wrote this'
+---
+
+# This is just standard markdown, write your blog as you normally would

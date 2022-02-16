@@ -1,0 +1,9 @@
+@use 'base';
+
+:root {
+    background: base.$clr-background-dark;
+}
+
+main {
+    min-height: 100vh;
+}

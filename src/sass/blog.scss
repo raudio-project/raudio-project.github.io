@@ -1,0 +1,70 @@
+@use 'base';
+
+:root {
+    background: base.$clr-background-dark;
+}
+
+main {
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1.5em;
+    min-height: 100vh;
+    flex-grow: 1;
+
+    margin: 3em 0;
+
+    a {
+        text-decoration: none;
+        width: 100%;
+        max-width: 60em;
+        
+        article {
+            margin: 0 1em;
+            min-height: 13rem;
+            background: base.$clr-background-light;
+            border-radius: 16px;
+            border: 1px solid black;
+            padding: 1.5em;
+            z-index: -1;
+    
+            display: grid;
+            grid-template-rows: max-content 1fr max-content;
+    
+            h1 {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+    
+            h2 {
+                font-family: base.$font-secondary;
+                font-size: 1.125rem;
+                font-weight: 500;
+                margin: 0.5em 0;
+            }
+            
+            p, a {
+                color: white;
+                display: inline;
+                font-family: base.$font-secondary;
+                font-size: 0.875rem;
+                font-family: base.$font-primary;
+                font-weight: normal;
+            }
+    
+            .author-text:hover {
+                color: base.$clr-accent;
+            }
+
+            transition: transform 150ms ease-out;
+        }
+
+        article:hover {
+            transform: scale(1.015);
+            filter: brightness(1.2);
+        }
+    }
+
+
+}

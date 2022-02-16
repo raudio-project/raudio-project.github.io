@@ -7,6 +7,7 @@ $clr-accent: #FFE9D2;
 $font-primary: 'IBM Plex Mono', monospace;
 $font-secondary: 'IBM Plex Sans', sans-serif;
 
+$nav-height: 4.6em;
 
 * {
     padding: 0;
@@ -30,13 +31,12 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    
-    position: fixed;
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: $clr-background-dark;
-    
-    // INFO: Is this needed? Hacky fix for now
-    z-index: 1000;
+    height: $nav-height;
 
     .home-text {
         color: white;
@@ -52,6 +52,27 @@ nav {
         flex-flow: row;
         gap: 1em;
         justify-content: center;
+
+        @keyframes nav-underline {
+            from {
+                transform: scaleX(0);
+            }
+
+            to {
+                transform: scaleX(50%);
+            }
+        }
+
+        a:hover::after {
+            content: '';
+            width: 65%;
+            height: 2px;
+            background-color: $clr-accent;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
         & > a {
             color: white;
