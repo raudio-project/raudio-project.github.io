@@ -97,7 +97,8 @@ nav {
             }
         }
 
-        a:not(.selected):hover::after {
+        a:not(.selected):hover::after,
+        a:not(.selected):active::after {
             content: '';
             width: 65%;
             height: 2px;
