@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 * {
   padding: 0;
@@ -186,68 +185,63 @@ footer::before {
   height: 0.15rem;
 }
 
-main section {
-  width: 100vw;
-  height: calc(100vh - 4.6em);
-}
-main .hero-introduction {
+:root {
   background: #282828;
+}
+
+main {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   align-items: center;
-  justify-content: center;
-  gap: 2em;
+  gap: 1.5em;
+  min-height: 100vh;
+  flex-grow: 1;
+  margin: 3em 0;
 }
-main .hero-introduction img {
-  aspect-ratio: 1;
-  object-fit: contain;
-  width: 30em;
-  animation: rotate-infinite 1.5s ease-in-out infinite;
-  animation-delay: 1s;
+main a {
+  text-decoration: none;
+  width: 100%;
+  max-width: 60em;
 }
-@keyframes rotate-infinite {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-main .hero-introduction .right-side {
-  max-width: 800px;
-}
-main .section-two {
+main a article {
+  margin: 0 1em;
+  min-height: 13rem;
   background: #373737;
+  border-radius: 16px;
+  border: 1px solid black;
+  padding: 1.5em;
+  z-index: -1;
   display: grid;
-  gap: 0;
-  place-items: center;
+  grid-template-rows: max-content 1fr max-content;
+  transition: transform 150ms ease-out;
 }
-main .section-two h2 {
-  margin: 0 2em;
-  text-align: center;
-  display: inline-block;
-  position: relative;
+main a article h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
-main .section-two h2::before {
-  content: "🚧";
-  position: absolute;
-  top: -1.5em;
-  font-size: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
+main a article h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0.5em 0;
+}
+main a article p, main a article a {
+  color: white;
+  display: inline;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.875rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: normal;
+}
+main a article .author-text:hover {
+  color: #FFE9D2;
+}
+main a article:hover {
+  transform: scale(1.015);
+  filter: brightness(1.2);
+}
+main a article:active {
+  transform: scale(0.975);
 }
 
-@media screen and (max-width: 800px) {
-  main .hero-introduction {
-    flex-flow: column;
-    text-align: center;
-  }
-  main .hero-introduction img {
-    width: 20em;
-  }
-  main .hero-introduction h1 {
-    font-size: 2rem;
-  }
-}
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=blog.css.map */
