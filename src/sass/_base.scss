@@ -7,6 +7,7 @@ $clr-accent: #FFE9D2;
 $font-primary: 'IBM Plex Mono', monospace;
 $font-secondary: 'IBM Plex Sans', sans-serif;
 
+$nav-height: 4.6em;
 
 * {
     padding: 0;
@@ -17,11 +18,42 @@ $font-secondary: 'IBM Plex Sans', sans-serif;
 h1 {
     color: white;
     font-family: $font-primary;
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    color: white;
+    font-family: $font-primary;
     font-weight: 400;
+    font-size: 1.75rem;
 }
 
 a {
     color: $clr-accent;
+    font-family: $font-secondary;
+    text-decoration: none;
+}
+
+.raudio-redirect-btn {
+    text-decoration: none;
+    padding: 0.5em 2em;
+    font-family: $font-secondary;
+    border-radius: 2px;
+    font-weight: 600;
+    background: $clr-background-dark;
+    color: white;
+}
+
+.accented {
+    background: $clr-accent;
+    color: black;
+}
+
+.outlined {
+    background: $clr-background-dark;
+    box-shadow: inset 0px 0px 0px 1px $clr-accent;
 }
 
 /* Nav Bar */
@@ -30,11 +62,13 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    
-    position: fixed;
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: $clr-background-dark;
-    
+    height: $nav-height;
+
     // INFO: Is this needed? Hacky fix for now
     z-index: 1000;
 
@@ -52,6 +86,30 @@ nav {
         flex-flow: row;
         gap: 1em;
         justify-content: center;
+
+        @keyframes nav-underline {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 65%;
+            }
+        }
+
+        a:not(.selected):hover::after,
+        a:not(.selected):active::after {
+            content: '';
+            width: 65%;
+            height: 2px;
+            background-color: $clr-accent;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            animation: nav-underline 200ms ease-in-out;
+        }
 
         & > a {
             color: white;

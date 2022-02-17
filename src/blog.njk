@@ -1,0 +1,19 @@
+---
+title: 'Raudio Blog'
+layout: base.njk
+page_name: 'blog'
+---
+
+{% for blog in collections.blogs %}
+    <a href="/blogs/{{ blog.fileSlug }}">
+        <article class="blog-entry">
+            <h1>{{ blog.data.title }}</h1>
+            <h2>{{ blog.data.description }}</h2>
+            <div class="article-info">
+                <p class="author-text">{{ blog.data.author }}</p>
+                <p> • </p>
+                <p>{{ blog.date | blogDate }}</p>
+            </div>
+        </article>
+    </a>
+{% endfor %}

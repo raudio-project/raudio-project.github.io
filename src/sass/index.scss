@@ -9,7 +9,7 @@ main {
     // smaller devices
     section {
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh - base.$nav-height);
     }
 
     .hero-introduction {
@@ -42,26 +42,8 @@ main {
             }
         }
 
-        h1 {
-            color: white;
-            font-family: base.$font-primary;
-            font-weight: 500;
-            font-size: 3rem;
-            margin-bottom: 0.5em;
-        }
-
         .right-side {
             max-width: 800px;
-        }
-
-        a {
-            background: base.$clr-accent;
-            color: black;
-            text-decoration: none;
-            padding: 0.5em 2em;
-            font-family: base.$font-secondary;
-            border-radius: 2px;
-            font-weight: 600;
         }
     }
 
@@ -74,15 +56,14 @@ main {
         gap: 0;
         place-items: center;
 
-        h1 {
+        h2 {
             margin: 0 2em;
-            font-size: 1.75rem;
             text-align: center;
             display: inline-block;
             position: relative;
         }
 
-        h1::before {
+        h2::before {
             content: '🚧';
             position: absolute;
             top: -1.5em;
