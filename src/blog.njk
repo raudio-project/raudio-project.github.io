@@ -16,4 +16,7 @@ page_name: 'blog'
             </div>
         </article>
     </a>
+{# If there are no blogs to display #}
+{% else %} 
+    <h2>No blog posts yet! Check in soon!</h2>
 {% endfor %}
