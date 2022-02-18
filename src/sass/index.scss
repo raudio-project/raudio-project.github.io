@@ -8,7 +8,7 @@ main {
     // INFO: Is it a good idea to use a relative unit here? Might break on
     // smaller devices
     section {
-        width: 100vw;
+        width: 100%;
         height: calc(100vh - base.$nav-height);
     }
 
