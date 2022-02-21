@@ -5,7 +5,7 @@ page_name: 'blog'
 ---
 
 {% for blog in collections.blogs %}
-    <a href="/blogs/{{ blog.fileSlug }}">
+    <a href="/blog/{{ blog.fileSlug }}">
         <article class="blog-entry">
             <h1>{{ blog.data.title }}</h1>
             <h2>{{ blog.data.description }}</h2>

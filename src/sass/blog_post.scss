@@ -4,6 +4,159 @@
     background: base.$clr-background-dark;
 }
 
+.container {
+    max-width: 50em;
+    margin: auto;
+    margin-top: 10em;
+    margin-bottom: 10em;
+}
+
+header, main {
+    margin: 0 1em 3em 1em;
+}
+
+header {
+    line-height: 1.5;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-family: base.$font-primary;
+        color: white;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        color: base.$clr-accent;
+        font-family: base.$font-secondary;
+        font-size: 1rem;
+    }
+
+    a {
+        color: base.$clr-background-light;
+        filter: brightness(2);
+    }
+}
+
 main {
-    min-height: 100vh;
+    min-height: 55vh;
+
+    h1 {
+        font-family: base.$font-primary;
+        font-size: 2rem;
+        color: base.$clr-accent;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+        color: white;
+        font-family: base.$font-primary;
+        font-weight: 500;
+        margin: 0.3em 0;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-family: base.$font-secondary;
+        color: white;
+        font-weight: normal;
+        margin: 0.3em 0;
+
+    }
+
+    h4 { 
+        font-size: 1.25rem;
+        font-family: base.$font-secondary;
+        color: white;
+        font-weight: normal;
+        margin: 0.3em 0;
+    }
+
+    h5, h6 {
+        font-size: 1.125rem;
+        font-family: base.$font-secondary;
+        color: white;
+        font-weight: normal;
+        margin: 0.3em 0;
+    }
+
+
+    p {
+        color: white;
+        font-family: base.$font-secondary;
+        font-size: 1.125rem;
+        margin: 1em 0;
+        line-height: 1.8;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    hr {
+        border: none;
+        margin: 2em 1em;
+        height: 1px;
+        background: base.$clr-background-light;
+        filter: brightness(1.25);
+    }
+
+    blockquote {
+        background: base.$clr-background-light;
+        border-radius: 8px;
+        border: 1px solid black;
+        padding: 0 3em;
+
+        position: relative;
+        
+        p {
+            font-family: base.$font-primary;
+        }
+    }
+
+    blockquote::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 1em;
+        transform: translateY(-50%);
+        height: 70%;
+        width: 0.3em;
+        background: base.$clr-accent;
+        border-radius: 8px;
+    }
+
+    ul, ol {
+        list-style-position: inside;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    li {
+        color: white;
+        font-size: 1.125rem;
+        font-family: base.$font-primary;
+        margin: 0 1.5em;
+        line-height: 2;
+    }
+
+    code {
+        color: white;
+        font-size: .875rem;
+        font-family: base.$font-primary;
+    }
+
+    pre {
+        background: base.$clr-background-light;
+        border-radius: 8px;
+        border: 1px solid black;
+        padding: 2em;
+    }
 }
