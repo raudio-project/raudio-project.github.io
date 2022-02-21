@@ -228,3 +228,38 @@ footer::before {
     width: 100%;
     height: 0.15rem;
 }
+
+/* Contributing Callout */
+.contributing-callout {
+    background: $clr-background-light;
+    height: 19em;
+    margin: 4em 2.5em;
+    border-radius: 8px;
+    padding: 2em;
+
+    display: flex;
+    flex-flow: column;
+    
+    h3 {
+        color: white;
+        font-family: $font-primary;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        color: white;
+        font-family: $font-secondary;
+        font-size: 1.125rem;
+        flex-grow: 1;
+    }
+
+    .buttons {
+        align-self: flex-end;
+        
+        a {
+            margin-left: 1em;
+        }
+    }
+}
