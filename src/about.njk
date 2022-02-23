@@ -5,12 +5,16 @@ page_name: 'about'
 ---
 
 <section id="about-us">
-
+    <h1 class="section-title">About Us</h1>
+    <p>We are undergraduate students at the University of Notre Dame participating in Professor Peter Bui’s Open Source Software Development class. We aim to develop an internet radio server, capable of sending audio streams to multiple different clients. The goal is, by the end of our semester, to build the primary audio server, as well as developing a client library so users can develop their own clients capable of interacting with the server!</p>
 </section>
 
 <section id="the-team">
-    <div class="team-member">
-
+    <h1 class="section-title">The Team</h1>
+    <div class="team-members">
+        {% for member in members %}
+            {% include "team_member_card.njk" %}
+        {%endfor%}
     </div>
 </section>
 

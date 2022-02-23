@@ -3,3 +3,47 @@
 :root {
     background: base.$clr-background-dark;
 }
+
+.section-title {
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+.section-title::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: base.$clr-accent;
+    position: absolute;
+    bottom: -5px;
+    left: 0%;
+
+}
+
+section {
+    padding: 3em 3em;
+}
+
+#about-us {
+    background: base.$clr-background-light;
+
+    p {
+        color: white;
+        font-family: base.$font-secondary;
+        font-size: 1.125rem;
+    }
+}
+
+#the-team {
+    height: 50em;
+
+    .team-members {
+        display: flex;
+        justify-content: center;
+        flex-flow: row;
+        gap: clamp(0.5em, 3vw, 8em);
+        margin: 0 1em;
+    }
+}

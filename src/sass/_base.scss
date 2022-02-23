@@ -38,6 +38,8 @@ a {
 
 .raudio-redirect-btn {
     text-decoration: none;
+    display: inline-block;
+    text-align: center;
     padding: 0.5em 2em;
     font-family: $font-secondary;
     border-radius: 2px;
@@ -232,7 +234,7 @@ footer::before {
 /* Contributing Callout */
 .contributing-callout {
     background: $clr-background-light;
-    height: 19em;
+    min-height: 19em;
     margin: 4em 2.5em;
     border-radius: 8px;
     padding: 2em;
@@ -262,4 +264,56 @@ footer::before {
             margin-left: 1em;
         }
     }
+}
+
+.team-member-card {
+    position: relative;
+    width: 20em;
+    aspect-ratio: 350/500;
+    background-color: $clr-background-light;
+    padding: 1.25em;
+    border-radius: 8px;
+
+    margin: 0 0 10em 0;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: $clr-background-dark;
+    }
+
+    h2 {
+        margin-top: 1em;
+        font-family: $font-primary;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-family: $font-primary;
+        font-size: 1.125rem;
+        color: $clr-accent;
+        font-weight: 500;
+    }
+
+    .link-vertical-button {
+        margin-top: 0.875em;
+        display: block;
+        width: 2.2em;
+        aspect-ratio: 0.8;
+        background: $clr-accent;
+        border-radius: 2px;
+        position: relative;
+
+        svg {
+            color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+
 }

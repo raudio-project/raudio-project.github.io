@@ -7,11 +7,9 @@
     "watch:sass": "sass src/sass:dist/css --watch",
     "watch:11ty": "eleventy --serve",
     "start": "npm run watch:11ty & npm run watch:sass",
-
     "build:sass": "sass src/sass:dist/css",
     "build:11ty": "eleventy",
     "build": "npm run build:11ty && npm run build:sass",
-    
     "deploy": "npm run build && gh-pages -d dist/"
   },
   "repository": {
@@ -26,6 +24,7 @@
   "homepage": "https://github.com/raudio-project/raudio-project.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "feather-icons": "^4.28.0",
     "gh-pages": "^3.2.3",
     "sass": "^1.49.7"
   }
