@@ -189,8 +189,138 @@ footer::before {
   background: #282828;
 }
 
+.container {
+  max-width: 50em;
+  margin: auto;
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+header, main {
+  margin: 0 1em 3em 1em;
+}
+
+header {
+  line-height: 1.5;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "IBM Plex Mono", monospace;
+  color: white;
+  margin: 0;
+}
+header h2 {
+  font-size: 1rem;
+}
+header p {
+  color: #FFE9D2;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+}
+header a {
+  color: #373737;
+  filter: brightness(2);
+}
+
 main {
-  min-height: 100vh;
+  min-height: 55vh;
+}
+main h1 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 2rem;
+  color: #FFE9D2;
+  font-weight: 600;
+}
+main h2 {
+  font-size: 1.875rem;
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  margin: 0.3em 0;
+}
+main h3 {
+  font-size: 1.5rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white;
+  font-weight: normal;
+  margin: 0.3em 0;
+}
+main h4 {
+  font-size: 1.25rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white;
+  font-weight: normal;
+  margin: 0.3em 0;
+}
+main h5, main h6 {
+  font-size: 1.125rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white;
+  font-weight: normal;
+  margin: 0.3em 0;
+}
+main p {
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.125rem;
+  margin: 1em 0;
+  line-height: 1.8;
+}
+main img {
+  width: 100%;
+}
+main hr {
+  border: none;
+  margin: 2em 1em;
+  height: 1px;
+  background: #373737;
+  filter: brightness(1.25);
+}
+main blockquote {
+  background: #373737;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 0 3em;
+  position: relative;
+}
+main blockquote p {
+  font-family: "IBM Plex Mono", monospace;
+}
+main blockquote::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  transform: translateY(-50%);
+  height: 70%;
+  width: 0.3em;
+  background: #FFE9D2;
+  border-radius: 8px;
+}
+main ul, main ol {
+  list-style-position: inside;
+}
+main ul {
+  list-style-type: disc;
+}
+main li {
+  color: white;
+  font-size: 1.125rem;
+  font-family: "IBM Plex Mono", monospace;
+  margin: 0 1.5em;
+  line-height: 2;
+}
+main code {
+  color: white;
+  font-size: 0.875rem;
+  font-family: "IBM Plex Mono", monospace;
+}
+main pre {
+  background: #373737;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 2em;
 }
 
 /*# sourceMappingURL=blog_post.css.map */

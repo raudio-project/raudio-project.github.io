@@ -187,8 +187,9 @@ footer::before {
 }
 
 main section {
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 4.6em);
+  padding: 0 1em;
 }
 main .hero-introduction {
   background: #282828;
