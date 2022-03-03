@@ -4,7 +4,7 @@ layout: base.njk
 page_name: 'blog'
 ---
 
-{% for blog in collections.blogs %}
+{% for blog in collections.blogs | reverse %}
     <a href="/blog/{{ blog.fileSlug }}">
         <article class="blog-entry">
             <h1>{{ blog.data.title }}</h1>
@@ -17,6 +17,6 @@ page_name: 'blog'
         </article>
     </a>
 {# If there are no blogs to display #}
-{% else %} 
+{% else %}
     <h2>No blog posts yet! Check in soon!</h2>
 {% endfor %}
