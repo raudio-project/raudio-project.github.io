@@ -267,7 +267,7 @@ main p {
   margin: 1em 0;
   line-height: 1.8;
 }
-main img {
+main img, main iframe {
   width: 100%;
 }
 main hr {
