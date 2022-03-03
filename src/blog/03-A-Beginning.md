@@ -17,4 +17,4 @@ Lastly, a project is all the more valuable when its contributors work on unfamil
 As we could greatly benefit from having users to cultivate a feedback loop and extend the lifetime of this project, we also realized how important it would be to publicize Raudio as early as possible.
 
 ## Slide Deck
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSxBYZ9BeCKFkUkgmWlYw6gbeAHAHs9vv3e0Bgr1SBumid1wwfqs1VFMP5dRSun6-4FiLS0xtZn4my-/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSxBYZ9BeCKFkUkgmWlYw6gbeAHAHs9vv3e0Bgr1SBumid1wwfqs1VFMP5dRSun6-4FiLS0xtZn4my-/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
