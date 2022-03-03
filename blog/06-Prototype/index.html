@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#282828">
+    <link rel="stylesheet" href="/css/blog_post.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/raudio_logo.png"/>
+    <title>Prototype</title>
+</head>
+<body>
+    
+<nav>
+    <a class="home-text" href="/">Raudio</a>
+    <div class="links">
+        <a class="" href="/">Home</a>
+        <a class="selected" href="/blog">Blog</a>
+        <a class="" href="/about">About</a>
+        <a class="" href="/contact">Contact</a>
+    </div>
+    <div class="right-side">
+        
+    </div>
+</nav>
+
+    <div class="container">
+        <header>
+            <a href="/blog/">Back to blogs</a>
+            <h1>Prototype</h1>
+            <h2>The initial MVP.</h2>
+            <p>Raudio · Mar 3, 2022</p>
+        </header>
+        
+        <main>
+            <h2>Server</h2>
+<p>A <a href="https://github.com/raudio-project/raudio-server/tree/legacy-rtp">minimal server</a> was first written that could stream an audio file via the command line (one file, one client).
+Adding onto this functionality, we are excited to share that our initial prototype is a server that streams an audio file on a loop to clients that receive the stream via GET requests.
+To manually test the functionality of the server, we are able to use <code>mpv</code> or go to the IP address and listen. Through our API, we support the control to pause and resume
+the audio file via PUT requests, so that client streams will pause and resume where it was left off. As of now, several users can connect and the serfver is able to control the playback.</p>
+<h2>Process</h2>
+<p>As for our next steps, we have our list of subprojects to keep an eye on as listed in <a href="https://raudio-project.github.io/blog/05-Design/">blog 2</a>.
+We plan to continue using a feedback loop involving discerning next tasks, how to implement them, executing them, and pushing the updates to the GitHub organization.</p>
+<h2>Switch from RTP to HLS</h2>
+<p>The minimal server used RTP via GStreamer, which worked for its scale, but we later ran into problems involving UDP while developing this prototype.
+We are using Momo, a machine on campus, to run our server, though the University of Notre Dame's firework apparently blocks some UDP traffic. Because of this,
+we realized that in general, clients with their own firewall would need to open a port to allow incoming stream packets.
+Since UDP is connectionless, we instead swapped to HLS via a Python wrapper for <a href="https://ffmpeg.org/">FFmpeg</a> which offers benefits greater than using RTP.</p>
+<p><img src="https://yld.moe/raw/fFs.png" alt="Updated architecture diagram"></p>
+<h1>In Action</h1>
+<p>The server is currently running on Momo, which is a machine (belonging to the Notre Dame Linux Users Group) running in the CSE Commons of the Fitzpatrick Hall of Engineering on the University of Notre Dame's campus.
+The stream is accessible to anyone on the eduroam network when visiting <a href="http://momo.campus.nd.edu:5000/stream">this link</a> on a client that can handle an HLS stream.
+Currently, we are still considering to use a VPS service instead of this university machine to avoid potential firewall issues again.</p>
+<p><img src="https://yld.moe/raw/iId.png" alt="Server in action"></p>
+<h2>Slide Deck</h2>
+<center><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQzYWOAEL6m9dkU4YWI5FnGDw_91ev8GMCuX4ykV7sRT6gYao0Qtc6SrYiiBskCARpuxaSCQB8ytQQb/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></center>
+
+        </main>
+    </div>
+
+    <footer>
+    <div class="links">
+        <section class="raudio-logo-and-copyright">
+            <img src="/assets/raudio_logo.png" alt="Image of the Raudio logo">
+            <h3>Raudio Project</h3>
+            <p>Copyright © 2022</p>
+            <p>All rights reserved.</p>
+        </section>
+        <section class="footer-links contact-us">
+            <h4>Contact Us</h4>
+            <div class="links-container">
+                <a onclick=comingSoon() href="#">Email</a>
+                <a href="https://discord.gg/FM78JTfU9X">Discord</a>
+                <a href="https://regserv.ndlug.org/">#raudio on NDLUG</a>
+            </div>
+        </section>
+        <section class="footer-links contribute">
+            <h4>Contribute</h4>
+            <div class="links-container">
+                <a href="https://github.com/raudio-project">GitHub</a>
+                <a onclick=comingSoon() href="#">Contribution Guidelines</a>
+                <a onclick=comingSoon() href="#">Documentation</a>
+            </div>
+        </section>
+        <section class="footer-links more">
+            <h4>More</h4>
+            <div class="links-container">
+                <a onclick=comingSoon() href="#">TBA</a>
+            </div>
+        </section>
+    </div>
+    <p>This project was created for the Open Source Software Development course at the University of Notre Dame. See more info <a href="https://www3.nd.edu/~pbui/teaching/cse.40677.sp22/">here</a>.</p>
+</footer>
+</body>
+</html>
