@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#282828">
+    <link rel="stylesheet" href="/css/blog_post.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/raudio_logo.png"/>
+    <title>First Steps: Infrastructure</title>
+</head>
+<body>
+    
+<nav>
+    <a class="home-text" href="/">Raudio</a>
+    <div class="links">
+        <a class="" href="/">Home</a>
+        <a class="selected" href="/blog">Blog</a>
+        <a class="" href="/about">About</a>
+        <a class="" href="/contact">Contact</a>
+    </div>
+    <div class="right-side">
+        
+    </div>
+</nav>
+
+    <div class="container">
+        <header>
+            <a href="/blog/">Back to blogs</a>
+            <h1>First Steps: Infrastructure</h1>
+            <h2>Decisions regarding how we should form our organization, how to manage our workflows, and what license to use.</h2>
+            <p>Raudio · Jan 20, 2022</p>
+        </header>
+        
+        <main>
+            <h2>Organization</h2>
+<h3>Name</h3>
+<p>Our name comes from the combination of &quot;radio&quot; and &quot;audio.&quot; Absolutely groundbreaking, we know! We named our GitHub organization <code>raudio-project</code> because Raudio was unfortunately taken.</p>
+<h3>Web Presence</h3>
+<p>We already planned to host our code (organization) on GitHub, so we figured it would be best choice to also host our website using GitHub Pages.
+We considered using static site generators, because all we planned the website to have was a landing page and blog posts such as these.
+After brief discussion about which static site generator to use, we had choices between 11ty, Hugo, and Jekyll, and ultimately went with 11ty because it was JavaScript based and had good reviews.</p>
+<h3>Repository Workflow</h3>
+<p>As we set up our GitHub organization where we are hosting our code base,
+we decided to have a workflow of creating branches for certain features and having at least another pair of eyes look at a commit before merging.
+We each have &quot;Owner&quot; access to the repository, which makes this double-layered process versatile and consistent.
+Lastly, we plan to create some sort of checklist and maybe an automated test suite if it's something realistic later on in development.</p>
+<h3>Communal</h3>
+<p>We created a Discord server to communicate to each other about anything related to the project.
+The server acts as a great communication point for both the contributors and future potential community members.
+We have separate channels dedicated for issues and development, and the main channel is also bridged to IRC for ease of use for those who prefer to use IRC.
+On top of using our Discord server for communicating with users, we will also be making use of the conveniently-placed issues tab found under every repository.
+We also considered using GitHub Projects or a Trello Board for more organization purposes, but found that with the magnitude of our project and our current tools, it wouldn't be necessary.</p>
+<h3>License</h3>
+<p>We decided on <code>GPL v3.0</code> because the prospect of someone using our work and making a profit off of it was unattractive.
+In addition, planning to use <a href="https://gstreamer.freedesktop.org/">GStreamer</a>, some of the libraries used are under GPL, so we followed that it would be the safest option to also go GPL.</p>
+<h2>Slide Deck</h2>
+<center><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSr3ESLM0zI8-LQpiZdQWHm1iVK2GraO_VomO516oNVJzA65JEVch8A_De8yfR25wSOtQ9N2ibpDXhO/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></center>
+
+        </main>
+    </div>
+
+    <footer>
+    <div class="links">
+        <section class="raudio-logo-and-copyright">
+            <img src="/assets/raudio_logo.png" alt="Image of the Raudio logo">
+            <h3>Raudio Project</h3>
+            <p>Copyright © 2022</p>
+            <p>All rights reserved.</p>
+        </section>
+        <section class="footer-links contact-us">
+            <h4>Contact Us</h4>
+            <div class="links-container">
+                <a onclick=comingSoon() href="#">Email</a>
+                <a href="https://discord.gg/FM78JTfU9X">Discord</a>
+                <a href="https://regserv.ndlug.org/">#raudio on NDLUG</a>
+            </div>
+        </section>
+        <section class="footer-links contribute">
+            <h4>Contribute</h4>
+            <div class="links-container">
+                <a href="https://github.com/raudio-project">GitHub</a>
+                <a onclick=comingSoon() href="#">Contribution Guidelines</a>
+                <a onclick=comingSoon() href="#">Documentation</a>
+            </div>
+        </section>
+        <section class="footer-links more">
+            <h4>More</h4>
+            <div class="links-container">
+                <a onclick=comingSoon() href="#">TBA</a>
+            </div>
+        </section>
+    </div>
+    <p>This project was created for the Open Source Software Development course at the University of Notre Dame. See more info <a href="https://www3.nd.edu/~pbui/teaching/cse.40677.sp22/">here</a>.</p>
+</footer>
+</body>
+</html>
