@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#282828">
-    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/blog_post.css">
     <link rel="shortcut icon" type="image/png" href="/assets/raudio_logo.png"/>
-    <title>Raudio Blog</title>
-
-    
-    <script>
-        const comingSoon = () => alert('Coming soon!');
-    </script>
+    <title>A Beginning</title>
 </head>
 <body>
     
@@ -28,50 +24,29 @@
         
     </div>
 </nav>
-    
-    <main>
-        
 
-    <a href="/blog/03-A-Beginning">
-        <article class="blog-entry">
+    <div class="container">
+        <header>
+            <a href="/blog/">Back to blogs</a>
             <h1>A Beginning</h1>
             <h2>How Raudio was born</h2>
-            <div class="article-info">
-                <p class="author-text">Raudio</p>
-                <p> • </p>
-                <p>Jan 13, 2022</p>
-            </div>
-        </article>
-    </a>
+            <p>Raudio · Jan 13, 2022</p>
+        </header>
+        
+        <main>
+            <h1>Project Proposal</h1>
+<p>We needed to come up with an idea for something practical that could be organized into an open-source project and teach us all something new.</p>
+<p>We decided to go for an audio client/server that works like a radio station, where a server would stream music files and several clients can connect and listen at once.
+To stay appropriate as an open-source project, we decided that this system would be self-hosted to transfer responsibility to users and avoid vendor lock-in (which caused the downfall of Rythm bot on Discord)
+We also decided that we will be creating one client as a default implementation for reference, and provide a documented API for users to make whichever clients they'd like to make.
+The client will be a reference implementation, and a documented API for users to hack on their own clients will be provided.</p>
+<p>Lastly, a project is all the more valuable when its contributors work on unfamiliar grounds. Therefore, we expect to run into some roadblocks regarding what libraries and protocols to use for our server, especially ones we aren't used to.
+As we could greatly benefit from having users to cultivate a feedback loop and extend the lifetime of this project, we also realized how important it would be to publicize Raudio as early as possible.</p>
+<h2>Slide Deck</h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSxBYZ9BeCKFkUkgmWlYw6gbeAHAHs9vv3e0Bgr1SBumid1wwfqs1VFMP5dRSun6-4FiLS0xtZn4my-/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-
-    <a href="/blog/01-Hello-World">
-        <article class="blog-entry">
-            <h1>Hello world</h1>
-            <h2>This is some text to test out markdown rendering</h2>
-            <div class="article-info">
-                <p class="author-text">Simon Rodriguez</p>
-                <p> • </p>
-                <p>Feb 15, 2022</p>
-            </div>
-        </article>
-    </a>
-
-
-    <a href="/blog/02-Extensive-Markdown-Test">
-        <article class="blog-entry">
-            <h1>Extensive Markdown Test</h1>
-            <h2>A stress test of the blog stylesheet</h2>
-            <div class="article-info">
-                <p class="author-text">Simon Rodriguez</p>
-                <p> • </p>
-                <p>Feb 15, 2022</p>
-            </div>
-        </article>
-    </a>
-
-
-    </main>
+        </main>
+    </div>
 
     <footer>
     <div class="links">
