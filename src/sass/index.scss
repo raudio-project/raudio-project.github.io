@@ -3,6 +3,10 @@
 // Use base template
 @use 'base';
 
+body {
+    background: base.$clr-background-dark;
+}
+
 main {
     // Every section will be 100% of the screen
     // INFO: Is it a good idea to use a relative unit here? Might break on
@@ -27,7 +31,7 @@ main {
             aspect-ratio: 1;
             object-fit: contain;
             width: 30em;
-            
+
             // Makes the image rotate
             animation: rotate-infinite 1.5s ease-in-out infinite;
             animation-delay: 1s;
@@ -52,7 +56,7 @@ main {
     // just display some filler text
     .section-two {
         background: base.$clr-background-light;
-        
+
         display: grid;
         gap: 0;
         place-items: center;
