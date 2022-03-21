@@ -186,6 +186,10 @@ footer::before {
   height: 0.15rem;
 }
 
+body {
+  background: #282828;
+}
+
 main section {
   width: 100%;
   height: calc(100vh - 4.6em);
