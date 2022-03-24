@@ -12,7 +12,7 @@ To manually test the functionality of the server, we are able to use `mpv` or go
 the audio file via PUT requests, so that client streams will pause and resume where it was left off. As of now, several users can connect and the serfver is able to control the playback.
 
 ## Process
-As for our next steps, we have our list of subprojects to keep an eye on as listed in [blog 2](https://raudio-project.github.io/blog/05-Design/). 
+As for our next steps, we have our list of subprojects to keep an eye on as listed in [blog 3](https://raudio-project.github.io/blog/03-Design/). 
 We plan to continue using a feedback loop involving discerning next tasks, how to implement them, executing them, and pushing the updates to the GitHub organization.
 
 ## Switch from RTP to HLS
