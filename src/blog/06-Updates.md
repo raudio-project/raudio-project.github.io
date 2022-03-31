@@ -25,3 +25,6 @@ students).
 
 ## Slide Deck
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTn-3cOd964ynrsXvekvy2ldfKP-8mJAdbgVBeeAWcNeMLmVNmSJ0PG2vquNjVaiq4Nn865Rt_QZDVa/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+## Showcase Video
+<iframe src="https://drive.google.com/file/d/1BElcWOi4bPMGhvmtrWqdAZ5P-9I80xB4/preview" width="640" height="480" allow="autoplay"></iframe>
