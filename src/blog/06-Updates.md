@@ -15,6 +15,8 @@ into our example bot.
 We are in the process of making Raudio available in PyPI. We did minor organization to our project and moved code files to a `src` directory. We also 
 finalized our `.gitignore` and added a `pyproject.toml` file, and a configuration file to ensure that we complete all requirements to package Raudio.
 
+Update: We have our packages available for our [server](https://pypi.org/project/raudio-server/) and [Discord bot](https://pypi.org/project/raudio-bot/)!
+
 ## Public
 We are still in the process of announcing Raudio and are nearly ready to do so on multiple sites to get public attention. We also are working on making
 our final Raudio presentation showcasing the final results of our project and its delivery to the public. We are also making a video that will demonstrate
