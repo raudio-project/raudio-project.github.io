@@ -1,4 +1,4 @@
-# raudio.github.io
+# raudio-project.github.io
 Landing page for raudio and blog.
 
 ## `npm start`

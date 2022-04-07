@@ -19,8 +19,22 @@ main {
         text-decoration: none;
         width: 100%;
         max-width: 60em;
+
+        @keyframes slide-in-on-load {
+            from {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+        }
         
         article {
+            animation: slide-in-on-load 750ms ease-out;
             margin: 0 1em;
             min-height: 13rem;
             background: base.$clr-background-light;

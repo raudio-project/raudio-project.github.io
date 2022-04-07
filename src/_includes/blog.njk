@@ -1,3 +1,7 @@
+---
+page_name: 'blog'
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +16,18 @@
 <body>
     {% include 'nav_bar.njk' %}
 
-    <header>
-        <h1>{{ title }}</h1>
-        <h2>{{ description }}</h2>
-        <p>{{ author }}</p>
-    </header>
-    
-    <main>
-        {{ content | safe }}
-    </main>
+    <div class="container">
+        <header>
+            <a href="/blog/">Back to blogs</a>
+            <h1>{{ title }}</h1>
+            <h2>{{ description }}</h2>
+            <p>{{ author }} · {{ date | blogDate }}</p>
+        </header>
+        
+        <main>
+            {{ content | safe }}
+        </main>
+    </div>
 
     {% include "footer.njk" %}
 </body>
