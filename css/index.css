@@ -29,6 +29,8 @@ a {
 
 .raudio-redirect-btn {
   text-decoration: none;
+  display: inline-block;
+  text-align: center;
   padding: 0.5em 2em;
   font-family: "IBM Plex Sans", sans-serif;
   border-radius: 2px;
@@ -184,6 +186,109 @@ footer::before {
   left: 0;
   width: 100%;
   height: 0.15rem;
+}
+
+/* Contributing Callout */
+.contributing-callout {
+  background: #373737;
+  min-height: 19em;
+  margin: 4em 2.5em;
+  border-radius: 8px;
+  padding: 2em;
+  display: flex;
+  flex-flow: column;
+}
+.contributing-callout h3 {
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.contributing-callout p {
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.125rem;
+  flex-grow: 1;
+}
+.contributing-callout .buttons {
+  align-self: flex-end;
+}
+.contributing-callout .buttons a {
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 700px) {
+  .contributing-callout {
+    margin: 0;
+    border-radius: 0;
+  }
+  .contributing-callout h3 {
+    font-size: 1.5rem;
+  }
+  .contributing-callout p {
+    font-size: 1rem;
+  }
+  .contributing-callout .buttons {
+    margin-top: 1em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+  }
+  .contributing-callout .buttons > a {
+    min-width: 15em;
+    width: 100%;
+  }
+}
+.team-member-card {
+  position: relative;
+  width: clamp(10em, 95vw, 20em);
+  aspect-ratio: 350/500;
+  background-color: #373737;
+  padding: 1.25em;
+  border-radius: 8px;
+}
+.team-member-card img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #282828;
+}
+.team-member-card h2 {
+  margin-top: 1em;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.team-member-card h3 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.125rem;
+  color: #FFE9D2;
+  font-weight: 500;
+}
+.team-member-card .links {
+  display: flex;
+  flex-flow: row;
+  gap: 0.7em;
+}
+.team-member-card .link-vertical-button {
+  margin-top: 0.875em;
+  display: block;
+  width: 2.2em;
+  aspect-ratio: 0.8;
+  background: #FFE9D2;
+  border-radius: 2px;
+  position: relative;
+}
+.team-member-card .link-vertical-button svg {
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 body {
