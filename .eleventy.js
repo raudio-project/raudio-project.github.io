@@ -14,6 +14,8 @@ module.exports = (eleventyConfig) => {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });
 
+    eleventyConfig.addCollection("team-members")
+
     return {
         dir: {
             input: 'src',

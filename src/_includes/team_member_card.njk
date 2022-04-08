@@ -1,0 +1,17 @@
+
+{# Built with the assumption of a "member" variable existing in the current template #}
+<div class="team-member-card">
+    <img src="{{member.img.src}}" alt="{{member.img.alt}}">
+    <h2>{{ member.name }}</h2>
+    <h3>{{ member.title }}</h3>
+    <div class="links">
+        {% for link in member.links %}
+            <a 
+                href="{{ link.href }}"
+                class="link-vertical-button"
+            >
+                {{ link.icon | safe}}
+            </a>
+        {% endfor %}
+    </div>
+</div>
