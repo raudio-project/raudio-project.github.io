@@ -264,17 +264,45 @@ footer::before {
             margin-left: 1em;
         }
     }
+
+}
+
+@media screen and (max-width: 700px) {
+    .contributing-callout {
+
+        margin: 0;
+        border-radius: 0;
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .buttons {
+            margin-top: 1em;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            width: 100%;
+            gap: 1em;
+            >a {
+                min-width: 15em;
+                width: 100%;
+            }
+        }
+    }
 }
 
 .team-member-card {
     position: relative;
-    width: 20em;
+    width: clamp(10em, 95vw, 20em);
     aspect-ratio: 350/500;
     background-color: $clr-background-light;
     padding: 1.25em;
     border-radius: 8px;
-
-    margin: 0 0 10em 0;
 
     img {
         width: 100%;
@@ -296,6 +324,12 @@ footer::before {
         font-size: 1.125rem;
         color: $clr-accent;
         font-weight: 500;
+    }
+
+    .links {
+        display: flex;
+        flex-flow: row;
+        gap: 0.7em;
     }
 
     .link-vertical-button {

@@ -23,7 +23,7 @@
 }
 
 section {
-    padding: 3em 3em;
+    padding: clamp(1em, 2vw, 3em);
 }
 
 #about-us {
@@ -33,17 +33,15 @@ section {
         color: white;
         font-family: base.$font-secondary;
         font-size: 1.125rem;
+        padding: 1em;
     }
 }
 
 #the-team {
-    height: 50em;
-
     .team-members {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 20em));
         justify-content: center;
-        flex-flow: row;
         gap: clamp(0.5em, 3vw, 8em);
-        margin: 0 1em;
     }
 }
